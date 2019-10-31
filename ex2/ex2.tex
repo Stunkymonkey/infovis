@@ -16,6 +16,10 @@
 \fancyhead[R]{3141241 - Jamie Ullerich \\ 2892258 - Gerhard Breul \\ 2973140 - Felix Bühler}
 \fancyhead[L]{Information Visualisation and Visual Analytics \\ WS 2019/20 }
 \renewcommand{\headrulewidth}{0.5pt}
+\usepackage{tikz}
+\usetikzlibrary{calc}
+
+
 
 \title{Assignment 2}
 
@@ -25,10 +29,111 @@
 	
 	\section*{Task 1 - Scales and Visual Mapping}
 	\subsection*{a)}
+	Ratio has a true value of zero and can not be below zero. interval instead can also have negative values.\\
+	For intervals the difference between values e.g. 10°C and 20°C is the same as the difference between 110°C and 120°C.\\
+	Because ratio have a true zero value it can be used to define e.g. 100K is two times warmer then 50K.\\
+	The term interval might result from the ability to declare intervals and ratio mightresult from the ability to declare ratios between all values.
 	\subsection*{b)}
+	\begin{itemize}
+		\item{\makebox[4cm]{degree Celsius\hfill} = interval}
+		\item{\makebox[4cm]{degree Kelvin\hfill} = ratio}
+		\item{\makebox[4cm]{dates\hfill} = interval}
+		\item{\makebox[4cm]{durations\hfill} = ratio}
+		\item{\makebox[4cm]{Cartesian coordinates\hfill} = interval}
+		\item{\makebox[4cm]{weight\hfill} = ratio}
+		\item{\makebox[4cm]{account balance\hfill} = ratio}
+		\item{\makebox[4cm]{length\hfill} = ratio}
+	\end{itemize}
 	\subsection*{c)}
+	\begin{itemize}
+		\item Persons:
+		\definecolor{c11}{RGB}{228,26,28}
+		\definecolor{c12}{RGB}{55,126,184}
+		\definecolor{c13}{RGB}{77,175,74}
+		\definecolor{c14}{RGB}{152,78,163}
+		\definecolor{c15}{RGB}{255,127,0}
+		\definecolor{c16}{RGB}{255,255,51}
+		\definecolor{c17}{RGB}{166,86,40}
+		\begin{figure}[!h]
+			\centering
+			\begin{tikzpicture}[remember picture]
+			\node [rectangle, fill, color=c11, text=black, anchor=east, minimum width=2.2cm, minimum height=0.7cm] (a){Max};
+			\node [rectangle, fill, color=c12, text=black, anchor=east, minimum width=2.2cm, minimum height=0.7cm, right of=a,node distance=2.4cm] (b){Ben};
+			\node [rectangle, fill, color=c13, text=black, anchor=east, minimum width=2.2cm, minimum height=0.7cm, right of=b,node distance=2.4cm] (c){Alice};
+			\node [rectangle, fill, color=c14, text=black, anchor=east, minimum width=2.2cm, minimum height=0.7cm, right of=c,node distance=2.4cm] (d){Bob};
+			\node [rectangle, fill, color=c15, text=black, anchor=east, minimum width=2.2cm, minimum height=0.7cm, right of=d,node distance=2.4cm] (e){Johanna};
+			\node [rectangle, fill, color=c16, text=black, anchor=east, minimum width=2.2cm, minimum height=0.7cm, right of=e,node distance=2.4cm] (f){Tiffany};
+			\node [rectangle, fill, color=c17, text=black, anchor=east, minimum width=2.2cm, minimum height=0.7cm, right of=f,node distance=2.4cm] (g){Andrea};
+			\end{tikzpicture}
+		\end{figure}
+		We wanted to concretely distinguish between all the names, therefore we used 7 different colors.
+		
+		\item Grades:
+		\definecolor{c21}{RGB}{26,152,80}
+		\definecolor{c22}{RGB}{145,207,96}
+		\definecolor{c23}{RGB}{217,239,139}
+		\definecolor{c24}{RGB}{254,224,139}
+		\definecolor{c25}{RGB}{252,141,89}
+		\definecolor{c26}{RGB}{215,48,39}
+		
+		\begin{figure}[!h]
+			\centering
+			\begin{tikzpicture}[remember picture]
+			\node [rectangle, fill, color=c21, text=black, anchor=east, minimum width=2.4cm, minimum height=0.7cm] (a){very good};
+			\node [rectangle, fill, color=c22, text=black, anchor=east, minimum width=2.4cm, minimum height=0.7cm, right of=a,node distance=2.6cm] (b){satisfactory};
+			\node [rectangle, fill, color=c23, text=black, anchor=east, minimum width=2.4cm, minimum height=0.7cm, right of=b,node distance=2.6cm] (c){good};
+			\node [rectangle, fill, color=c24, text=black, anchor=east, minimum width=2.4cm, minimum height=0.7cm, right of=c,node distance=2.6cm] (d){sufficientient};
+			\node [rectangle, fill, color=c25, text=black, anchor=east, minimum width=2.4cm, minimum height=0.7cm, right of=d,node distance=2.6cm] (e){unsatisfactory};
+			\node [rectangle, fill, color=c26, text=black, anchor=east, minimum width=2.4cm, minimum height=0.7cm, right of=e,node distance=2.6cm] (f){poor};
+			\end{tikzpicture}
+		\end{figure}
+		Usually green indicates e.g. eatable or drive (traffic light). Red instead indicates e.g. poisonous or dangerous. Therefore we used green for good things and red for bad things.
+		\item Degree Celsius:
+		
+		\begin{figure}[!h]
+			\centering
+			\begin{tikzpicture}[remember picture]
+			\node [rectangle, left color=blue, right color=red, anchor=south, minimum width=\textwidth-2cm, minimum height=0.7cm] {};
+
+			\node [rectangle, anchor=north, minimum height=0.7cm] at (-0.0 / 70* \textwidth, 0) {-0.0};
+			\draw (-0.0 / 70* \textwidth,-0.1) -- (-0.0 / 70* \textwidth,0.7);
+			\node [rectangle, anchor=north, minimum height=0.7cm] at (-3.5 / 70 * \textwidth, 0) {-3.5};
+			\draw (-3.5 / 70 * \textwidth,-0.1) -- (-3.5 / 70* \textwidth,0.7);
+			\node [rectangle, anchor=north, minimum height=0.7cm] at (2.1 / 70 * \textwidth, 0) {+2.1};
+			\draw (2.1 / 70 * \textwidth,-0.1) -- (2.1 / 70* \textwidth,0.7);
+			\node [rectangle, anchor=north, minimum height=0.7cm] at (13.5 / 70 * \textwidth, 0) {+13.5};
+			\draw (13.5 / 70* \textwidth,-0.1) -- (13.5 / 70* \textwidth,0.7);
+			\node [rectangle, anchor=north, minimum height=0.7cm] at (5.2 / 70* \textwidth, 0) {+5.2};
+			\draw (5.2 / 70* \textwidth,-0.1) -- (5.2 / 70* \textwidth,0.7);
+			\node [rectangle, anchor=north, minimum height=0.7cm] at (-6.0 / 70* \textwidth, 0) {-6.0};
+			\draw (-6.0 / 70* \textwidth,-0.1) -- (-6.0 / 70* \textwidth,0.7);
+			\node [rectangle, anchor=north, minimum height=0.7cm] at (22.7 / 70* \textwidth, 0) {+22.7};
+			\draw (22.7 / 70* \textwidth,-0.1) -- (22.7 / 70* \textwidth,0.7);
+			\node [rectangle, anchor=north, minimum height=0.7cm] at (18.3 / 70* \textwidth, 0) {+18.3};
+			\draw (18.3 / 70* \textwidth,-0.1) -- (18.3 / 70* \textwidth,0.7);
+
+			\end{tikzpicture}
+		\end{figure}
+		Red usually means hot and blue means cold. therefore value zero is a mixture and in our case purple.
+		
+	\end{itemize}
 	\subsection*{d)}
-				
+	
+	visual variables:
+	\begin{itemize}
+		\item bar chart:
+		\begin{itemize}
+			\item lenght
+			\item position
+		\end{itemize}
+		\item pie chart:
+		\begin{itemize}
+			\item angle
+			\item area
+		\end{itemize}
+	\end{itemize}
+	If we had to sort the values in increasing order, we would choose the bar chart over
+	the pie chart. With respect to the visual variables it is easier to interpret and detect differences in length and position than in angle and area. If something can be expressed in percentage the pie chart provides a better understanding of the data.
 	
 	\section*{Task 2 - Storytelling}
 	
