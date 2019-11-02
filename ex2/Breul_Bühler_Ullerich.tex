@@ -23,21 +23,42 @@
 
 \title{Assignment 2}
 
+\usepackage[ngerman]{babel}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{textcomp}
+\usepackage{geometry}
+\geometry{ left=2cm, right=2cm, top=2cm, bottom=4cm, bindingoffset=5mm}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\date{}
+\author{}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[R]{3141241 - Jamie Ullerich \\ 2892258 - Gerhard Breul \\ 2973140 - Felix Bühler}
+\fancyhead[L]{Information Visualisation and Visual Analytics \\ WS 2019/20 }
+\renewcommand{\headrulewidth}{0.5pt}
+\usepackage{tikz}
+\usetikzlibrary{calc}
+
+
+
+\title{Assignment 2}
+
 \begin{document}
 	\maketitle 
 	\thispagestyle{fancy}
 	
+	
 	\section*{Task 1 - Scales and Visual Mapping}
 	\subsection*{a)}
-	Ratio has a true value of zero and can not be below zero. interval instead can also have negative values.\\
-	For intervals the difference between values e.g. 10°C and 20°C is the same as the difference between 110°C and 120°C.\\
-	Because ratio have a true zero value it can be used to define e.g. 100K is two times warmer then 50K.\\
-	The term interval might result from the ability to declare intervals and ratio might
-result from the ability to declare ratios between all values.
+	A ratio scale has a meaningful zero value, which makes multiplicative operations possible. This allows for statements about ratios such as 'value a is 2x greater than value b'. \\For interval scales the difference between values e.g. 10°C and 20°C is the same as the difference between 110°C and 120°C. The term interval might result from the ability to declare intervals and ratio might result from the ability to declare ratios between all values.
 	\subsection*{b)}
 	\begin{itemize}
 		\item{\makebox[4cm]{degree Celsius\hfill} = interval}
-		\item{\makebox[4cm]{degree Kelvin\hfill} = ratio}
+		\item{\makebox[4cm]{Kelvin\hfill} = ratio}
 		\item{\makebox[4cm]{dates\hfill} = interval}
 		\item{\makebox[4cm]{durations\hfill} = ratio}
 		\item{\makebox[4cm]{Cartesian coordinates\hfill} = interval}
@@ -100,7 +121,7 @@ result from the ability to declare ratios between all values.
 			\node [rectangle, fill, color=c26, text=black, anchor=east, minimum width=2.4cm, minimum height=0.7cm, right of=e,node distance=2.6cm] (f){poor};
 			\end{tikzpicture}
 		\end{figure}
-		Usually green indicates e.g. eatable or drive (traffic light). Red instead indicates e.g. poisonous or dangerous. Therefore we used green for good things and red for bad things.
+		Usually green indicates something positive ('go' on a traffic light). Red instead indicates something negative such as danger ('stop' on a traffic light). Therefore we used green for good things and red for bad things.
 		\item Degree Celsius:
 		
 		\begin{figure}[!h]
@@ -145,19 +166,25 @@ result from the ability to declare ratios between all values.
 			\item area
 		\end{itemize}
 	\end{itemize}
-	If we had to sort the values in increasing order, we would choose the bar chart over
-	the pie chart. With respect to the visual variables it is easier to interpret and detect differences in length and position than in angle and area. If something can be expressed in percentage the pie chart provides a better understanding of the data.
+	When sorting values in increasing order, the bar chart has an advantage over the pie chart. With respect to the visual variables it is easier to interpret and detect differences in length than in angle and area. If the task was to express something as a percentage the pie chart would make the data more easily understandable.
 	
 	
 	\section*{Task 2 - Storytelling}
 	
 	\includegraphics[width=\linewidth]{climatechangevis.pdf}
-	
-	\newpage
-	
-	\begin{figure}[htb]
-		\rotatebox{90}{%	
-			\includegraphics[width=25cm]{climatechangevis.pdf}		
-		}
-	\end{figure}
+		\begin{itemize}		
+				\item Comprehensibility: The visual representation of the relation between temperature, Sea level and atmospheric CO2 content over a period of 50 years makes it clear that rising CO2-levels are related to warmer climate and rising sea levels. The causes can be understood at a glance thanks to the pictures and are elaborated on more closely by the text next to each of them.
+				\item Likability: Thanks to the scales' colorfulness and drawings depicting the causes, the visualization becomes more visually interesting and engaging.
+				\item To improve navigability, dashed lines separate the visualization into three parts. This helps to separate the part regarding the causes of climate change form the part regarding its consequences and structures the visualization.
+
+		\end{itemize}
+
+%	
+%	\newpage
+%	
+%	\begin{figure}[htb]
+%		\rotatebox{90}{%	
+%			\includegraphics[width=25cm]{climatechangevis.pdf}		
+%		}
+%	\end{figure}
 \end{document}
