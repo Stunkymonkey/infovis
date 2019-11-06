@@ -18,6 +18,7 @@
 \renewcommand{\headrulewidth}{0.5pt}
 \usepackage{tikz}
 \usetikzlibrary{calc}
+\usepackage{amsmath}
 
 
 
@@ -29,9 +30,22 @@
 
 \section*{Task 1 - Lie Factor}
 \subsection*{1.1}
-\subsection*{1.2}
-\section*{Task 2 - Gestalt Principles}
+\begin{align*}
+\text{Lie Factor}&= \dfrac{\text{Size of effect in graphic}}{\text{Size of actual effect in data}}\\
+ratio &= 590px / 275px = 2.145\\
+Area_{Poland} &= 590px * 275px = 162,250px\\
+Area_{Italy} &= 405px * (405px / 2.145) = 405px * 189px = 76,545px\\
+Area_{Spain} &= 200px * (200px / 2.145) = 200px * 93px = 18,600px\\
+\text{Lie Factor}_{\text{Poland, Italy}} &= \dfrac{\frac{162,250px - 76,545px}{76,545px}}{\frac{4431 - 3480}{3480}} = 4.097\\
+\text{Lie Factor}_{\text{Poland, Spain}} &= \dfrac{\frac{162,250px - 18,600px}{18,600px}}{\frac{4431 - 2468}{2468}} = 9.71\\
+\text{Lie Factor}_{\text{Italy, Spain}} &= \dfrac{\frac{76,545px - 18,600px}{18,600px}}{\frac{3480 - 2468}{2468}} = 7.597
+\end{align*}
+lie factor should have a value between 0.95 and 1.05, otherwise a great distortion is detected.
 
+\subsection*{1.2}
+The lie factor is for both exactly the same, because the used doors have the same dimensions. In the first picture there is no background and therefore the lie factor can easily be spotted. In the second one the background adds perspective, which in turn makes the actual values blur.
+
+\section*{Task 2 - Gestalt Principles}
 \begin{enumerate}
 	\item[a)]
 	Law of Continuity: it is possible to read the two words ''Coca'' and ''Cola'', even though they overlap. 
