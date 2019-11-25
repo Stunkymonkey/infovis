@@ -1,0 +1,68 @@
+\documentclass[a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{textcomp}
+\usepackage{geometry}
+\geometry{ left=2cm, right=2cm, top=2cm, bottom=4cm, bindingoffset=5mm}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\date{}
+\author{}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[R]{3141241 - Jamie Ullerich \\ 2892258 - Gerhard Breul \\ 2973140 - Felix Bühler}
+\fancyhead[L]{Information Visualisation and Visual Analytics \\ WS 2019/20 }
+\renewcommand{\headrulewidth}{0.5pt}
+\usepackage{tikz}
+\usetikzlibrary{calc}
+\usepackage{amsmath}
+\usepackage{cleveref}
+
+
+\title{\textbf{Assignment 6}}
+
+\begin{document}
+\maketitle 
+\thispagestyle{fancy}
+
+\section*{Task 1 - Multivariate Data}
+
+\begin{enumerate}
+	\item[(a)]
+	Yes, there is a correlation between x and y, since the correlation coefficient is very high, there is a positive linear correlation. 
+	Surprisingly, the mean, variance and persons correlation coefficient are the same for all four groups. 
+	
+	
+	\begin{tabular}{| c |c c | c c | c c | c c|} \hline
+		&\multicolumn{2}{|c|}{I} & \multicolumn{2}{|c|}{II} &
+		\multicolumn{2}{c|}{III} & \multicolumn{2}{|c|}{IV} \\ \hline
+		&x & y & x & y & x & y & x & y\\ \hline 
+		mean & 9 & 7.50 &9 &7.50&9&7.5&9&7.50\\ \hline 
+		variance & 11.0 & 4.127 & 11.0 & 4.127  & 11.0 & 4.127 & 11.0 & 4.127 \\ \hline
+		pearson & \multicolumn{2}{|c|}{0.8164}  &   \multicolumn{2}{|c|}{0.8164} &  
+		 \multicolumn{2}{|c|}{0.8164}  &   \multicolumn{2}{|c|}{0.8164} \\ \hline  
+		
+	\end{tabular}
+
+	
+	\item[(b)] The plots are shown in \Cref{scatterplots} \\
+	\begin{figure}[h!]
+		\includegraphics[width=.5\linewidth]{ScatterplotI.pdf}
+		\includegraphics[width=.5\linewidth]{ScatterplotII.pdf}
+		\includegraphics[width=.5\linewidth]{ScatterplotIII.pdf}
+		\includegraphics[width=.5\linewidth]{ScatterplotIV.pdf}
+		\caption{Task 1 (b) - Scatter plots}
+		\label{scatterplots}
+	\end{figure}
+	
+	It is not visible in the plots, that each of these has the same correlation and variance, as well as mean values for x and y. 
+	
+	\item[(c)] 
+	
+\end{enumerate}
+
+
+
+
+\end{document}
