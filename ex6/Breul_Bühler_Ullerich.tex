@@ -18,6 +18,7 @@
 \usetikzlibrary{calc}
 \usepackage{amsmath}
 \usepackage{cleveref}
+\usepackage{subcaption}
 
 
 \title{\textbf{Assignment 6}}
@@ -47,18 +48,38 @@
 
 	
 	\item[(b)] The plots are shown in \Cref{scatterplots} \\
-	\begin{figure}[h!]
-		\includegraphics[width=.5\linewidth]{ScatterplotI.pdf}
-		\includegraphics[width=.5\linewidth]{ScatterplotII.pdf}
-		\includegraphics[width=.5\linewidth]{ScatterplotIII.pdf}
-		\includegraphics[width=.5\linewidth]{ScatterplotIV.pdf}
+	\begin{figure}[!ht]
+		\centering
+		\begin{subfigure}{.35\textwidth}
+			\includegraphics[width=\linewidth]{ScatterplotI.pdf}
+		\end{subfigure}		
+		\begin{subfigure}{.35\textwidth}
+			\includegraphics[width=\linewidth]{ScatterplotII.pdf}
+		\end{subfigure}
+		\begin{subfigure}{.35\textwidth}
+			\includegraphics[width=\linewidth]{ScatterplotIII.pdf}
+		\end{subfigure}
+		\begin{subfigure}{.35\textwidth}
+			\includegraphics[width=\linewidth]{ScatterplotIV.pdf}
+		\end{subfigure}		
+		
+		
+		
 		\caption{Task 1 (b) - Scatter plots}
 		\label{scatterplots}
 	\end{figure}
 	
 	It is not visible in the plots, that each of these has the same correlation and variance, as well as mean values for x and y. 
 	
-	\item[(c)] 
+	\item[(c)] Scatterplot Matrices can be used to visualised this data. 
+	This way, the patterns between all variables are still visible and zooming into the plot can be used to see more details. 
+	The plot is shown in \Cref{scatterplots_d}.
+	\begin{figure}[!ht]
+		\includegraphics[width=\linewidth]{task1_d_scatterplot_matrix.png}
+		
+		\caption{Task 1 (d) - Scatterplot Matrices }
+		\label{scatterplots_d}
+	\end{figure}
 	
 \end{enumerate}
 
