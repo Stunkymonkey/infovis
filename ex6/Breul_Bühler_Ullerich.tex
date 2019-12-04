@@ -86,29 +86,33 @@
 \newpage
 \section*{Task 2 - Dimensionality Reduction (DR)}
 
-\subsection*{(a)}
-dimensionality reduction is specially useful for reducing computation time and space (storage and memory). Sometime redundant dimensions are causing an overhead, or dimensions can be combined, without loosing information. Also better for visualization, because the user can understand the data.
-
-\subsection*{(b)}
-\begin{figure}[!ht]
-	\centering
-	\includegraphics[width=0.7\linewidth]{swiss_roll}
-	\caption{raw data}
-\end{figure}
-
-\subsection*{(c)}
-\begin{itemize}
-	\item \begin{figure}[!ht]
+\begin{enumerate}
+	\item[a)]Dimensionality reduction is specially useful for reducing computation time and space (storage and memory). Sometime redundant dimensions are causing an overhead, or dimensions can be combined, without loosing information. Also better for visualization, because the user can understand the data.
+	\item[b)] See Figure \Cref{fig:rawdata}.
+	\begin{figure}[!ht]
 		\centering
-		\includegraphics[width=0.7\linewidth]{swiss_roll_result}
-		\caption{after pca}
+		\includegraphics[width=0.7\linewidth]{swiss_roll}
+		\caption{raw data}
+		\label{fig:rawdata}
 	\end{figure}
-	\item The given spiral is unrolled, so the spiral information is gone missing, but the mat is was made of still preserves the 2d-information.
-	\item TODO
-\end{itemize}
+	\item[c)]
+	\begin{itemize}
+		\item See \Cref{fig:afterpca}
+		
+		\begin{figure}[!ht]
+			\centering
+			\includegraphics[width=0.7\linewidth]{swiss_roll_result}
+			\caption{after pca}
+			\label{fig:afterpca}
+		\end{figure}
+		\item The given spiral is unrolled, so the spiral information is gone missing, but the mat is was made of still preserves the 2d-information.
+		%\item TODO
+	\end{itemize}
+	
+\end{enumerate}
 
 
-\subsection*{(d) (optional)}
+
 -
 
 \end{document}
