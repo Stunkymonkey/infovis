@@ -11,7 +11,7 @@
 \usepackage{fancyhdr}
 \pagestyle{fancy}
 \fancyhf{}
-\fancyhead[R]{3141241 - Jamie Ullerich \\ 2892258 - Gerhard Breul \\ 2973140 - Felix Bühler}
+\fancyhead[R]{ 2973140 - Felix Bühler \\ 2892258 - Gerhard Breul \\  3141241 - Jamie Ullerich}
 \fancyhead[L]{Information Visualisation and Visual Analytics \\ WS 2019/20 }
 \renewcommand{\headrulewidth}{0.5pt}
 \usepackage{tikz}
@@ -35,21 +35,58 @@
 \thispagestyle{fancy}
 
 \section*{Task 1 - The Information Visualization Reference Model}
-\subsection*{(a)}
-\subsubsection*{i.}
-\subsubsection*{ii.}
-\subsubsection*{iii.}
-\subsection*{(b)}
-\subsection*{(c)}
-\subsection*{(d)}
+\begin{enumerate}
+	\item[(a)]
+		\begin{enumerate}
+			\item[i.]
+			\item[ii.]
+			\item[iii.]
+		\end{enumerate}
+	\item[(b)]
+	\item[(c)]
+	\item[(d)]
+\end{enumerate}
+
 
 \section*{Task 2 - Interaction with Interactive Visualizations}
-\subsection*{(a)} the user can select two nodes. The connecting edge will be displayed, as soon as two markers are selected.
-\subsection*{(b)} zooming in, but keeping the same sizes for each node. Thereby the nodes will split up eventually.
-\subsection*{(c)} on the side there is a filter where you can select different colors. The nodes of the selected color are getting bigger and thereby easier to select.
+\begin{enumerate}
+	\item[(a)]The user can select two nodes. The connecting edge will be displayed, as soon as two markers are selected.
+	\item[(b)]Zooming in, but keeping the same sizes for each node. Thereby the nodes will split up eventually.
+	\item[(c)]On the side there is a filter where you can select different colors. The nodes of the selected color are getting bigger and thereby easier to select.
+\end{enumerate}
 
 \section*{Task 3 - k-d Trees}
-\subsection*{(a)}
-\subsection*{(b)}
+\begin{enumerate}
+	\item[(a)] See \Cref*{kdtree} for the resulting tree.
+	\begin{figure}
+		\centering
+		\begin{subfigure}[t]{.4\textwidth}
+			\includegraphics[height=5cm]{2-dtree.pdf}
+			\caption{Data points visualised as areas.}
+		\end{subfigure}
+	\begin{subfigure}[t]{.4\textwidth}
+		\includegraphics[width=\linewidth]{2dtree_nodelink.pdf}
+		\caption{Data points visualised as a node-link diagram.}
+	\end{subfigure}
+	\caption{k-d Tree}
+	\label{kdtree}
+	\end{figure}
+	\item[(b)] The problem with this tree is, that it is not balanced. 
+	This can be fixed by taking the median point, that is changing the order of the given points in task (a). 
+	The resulting tree can be seen in \Cref*{kdtree2}.
+	\begin{figure}
+		\centering
+	\begin{subfigure}[t]{.4\textwidth}
+		\includegraphics[width=\textwidth]{kd-tree2.pdf}
+		\caption{Data points visualised as areas.}
+	\end{subfigure}
+	\begin{subfigure}[t]{.4\textwidth}
+		\includegraphics[width=\linewidth]{2dtree_nodelink2.pdf}
+		\caption{Data points visualised as a node-link diagram.}
+	\end{subfigure}
+	\caption{balanced k-d Tree}
+	\label{kdtree2}
+\end{figure}
+\end{enumerate}
 
 \end{document}
