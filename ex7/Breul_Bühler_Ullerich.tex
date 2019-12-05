@@ -47,46 +47,63 @@
 	\item[(d)]
 \end{enumerate}
 
-
+\clearpage
 \section*{Task 2 - Interaction with Interactive Visualizations}
 \begin{enumerate}
 	\item[(a)]The user can select two nodes. The connecting edge will be displayed, as soon as two markers are selected.
-	\item[(b)]Zooming in, but keeping the same sizes for each node. Thereby the nodes will split up eventually.
-	\item[(c)]On the side there is a filter where you can select different colors. The nodes of the selected color are getting bigger and thereby easier to select.
+	See the picture below for the sketch, where two selected nodes are displayed in green an the edge between them is highlighted in dark purple.
+	
+	\includegraphics[width=5cm]{2a.png}
+	
+	\item[(b)]Zooming in, but keeping the same sizes for each node. Thereby the nodes will split up eventually. This process can be seen in the picture below, where we zoomed into the upper left corner with a focus on the big node in the middle, which can be hardly seen in the original picture.
+	This process might consume a lot of time, depending on how many markers must be selected, it can be possible that the user has to zoom in quite a bit for several times. 
+	
+	\includegraphics[width=\linewidth]{2b.png}
+	
+	\item[(c)]On the side there is a filter where you can select different colors. 
+	The nodes of the selected color are getting bigger and thereby easier to select. 
+	In the example below, the pink and light blue nodes are selected. 
+	Obviously, there will be the same problem of overlapping markers, if all nodes are selected. 
+	But this can be solved by just selecting the needed ones. 
+	
+	%\includegraphics[width=\linewidth]{2c.png}
+	\includegraphics[height=5cm]{2c2.png}
 \end{enumerate}
 
+\clearpage
 \section*{Task 3 - k-d Trees}
 \begin{enumerate}
-	\item[(a)] See \Cref*{kdtree} for the resulting tree.
-	\begin{figure}
-		\centering
-		\begin{subfigure}[t]{.4\textwidth}
-			\includegraphics[height=5cm]{2-dtree.pdf}
-			\caption{Data points visualised as areas.}
-		\end{subfigure}
+	\item[(a)] See \Cref*{1,2} for the resulting tree.
+	
+	\item[(b)] The problem with this tree is, that it is not balanced. 
+	This can be fixed by taking the median point, that is changing the order of the given points in task (a). 
+	The resulting tree can be seen in \Cref*{3,4}.
+	
+\end{enumerate}
+\begin{figure}[!hb]
+	\centering
+	\begin{subfigure}[t]{.4\textwidth}
+		\includegraphics[height=5cm]{2-dtree.pdf}
+		\caption{Data points visualised as areas.}
+		\label{1}
+	\end{subfigure}
 	\begin{subfigure}[t]{.4\textwidth}
 		\includegraphics[width=\linewidth]{2dtree_nodelink.pdf}
 		\caption{Data points visualised as a node-link diagram.}
+		\label{2}
 	\end{subfigure}
-	\caption{k-d Tree}
-	\label{kdtree}
-	\end{figure}
-	\item[(b)] The problem with this tree is, that it is not balanced. 
-	This can be fixed by taking the median point, that is changing the order of the given points in task (a). 
-	The resulting tree can be seen in \Cref*{kdtree2}.
-	\begin{figure}
-		\centering
 	\begin{subfigure}[t]{.4\textwidth}
 		\includegraphics[width=\textwidth]{kd-tree2.pdf}
 		\caption{Data points visualised as areas.}
+		\label{3}
 	\end{subfigure}
 	\begin{subfigure}[t]{.4\textwidth}
 		\includegraphics[width=\linewidth]{2dtree_nodelink2.pdf}
 		\caption{Data points visualised as a node-link diagram.}
+		\label{4}
 	\end{subfigure}
-	\caption{balanced k-d Tree}
-	\label{kdtree2}
+	\caption{k-d Trees}
+	\label{kdtree}
 \end{figure}
-\end{enumerate}
 
 \end{document}
