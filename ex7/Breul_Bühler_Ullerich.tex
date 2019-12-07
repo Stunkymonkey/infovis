@@ -20,7 +20,7 @@
 \usepackage{cleveref}
 \usepackage{subcaption}
 
-\usepackage{changepage,lipsum,titlesec}
+\usepackage{changepage,titlesec}
 \titleformat{\section}[block]{\bfseries}{\thesection.}{1em}{}
 \titleformat{\subsection}[block]{}{\thesubsection}{1em}{}
 \titleformat{\subsubsection}[block]{}{\thesubsubsection}{1em}{}
@@ -36,15 +36,20 @@
 
 \section*{Task 1 - The Information Visualization Reference Model}
 \begin{enumerate}
+
+	\item[stages:] I. Data Transformations\\
+	 II. Visual Mappings\\
+	 III. View Transformations
 	\item[(a)]
 		\begin{enumerate}
-			\item[i.]
-			\item[ii.]
-			\item[iii.]
+			\item[I.] First, the data is filtered so that only the locational and income data remains in the data tables (stage I). Then, this data is visually mapped onto the map (stage II). The change from scatterplot to choropleth map can be considered  a view transformation (stage III).
+			\item[II.] The source data is filtered again to show voter turnout instead of income (stage I).
+			\item[III.] Using the same source data and view transformation, only the visual mapping is changed to better highlight whether voter turnout is greater or less than 50\% (stage II). 
+			\item[IV.] Here, the visual perspective is changed from III, zooming in on a certain part of the map (stage III).
 		\end{enumerate}
-	\item[(b)]
-	\item[(c)]
-	\item[(d)]
+	\item[(b)] The source data is  filtered to only show data for the selected years (stage I). The x- and y-axes are shortend as well to better represent the smaller dataset, changing the data's mapping (stage II).
+	\item[(c)] Adjusting the axes in a PCP changes their visual mapping(stage II).
+	\item[(d)] Geometric zooming as in a.IV) modifies the visual perspective and therefore impacts stage III of the Information Visualization Reference Model. While semantic zooming as performed in b) could be considered to be a perspective modification, it seems more fitting to see it as a modification of the data's visual mapping, meaning the interaction takes place at stage II.
 \end{enumerate}
 
 \clearpage
