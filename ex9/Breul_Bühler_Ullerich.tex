@@ -20,7 +20,7 @@
 \usepackage{cleveref}
 \usepackage{subcaption}
 
-\usepackage{changepage,lipsum,titlesec}
+\usepackage{changepage,titlesec}
 \titleformat{\section}[block]{\bfseries}{\thesection.}{1em}{}
 \titleformat{\subsection}[block]{}{\thesubsection}{1em}{}
 \titleformat{\subsubsection}[block]{}{\thesubsubsection}{1em}{}
@@ -66,13 +66,9 @@
 
 \subsection*{a)} Often the amount of dimensions of the data is much higher, then what could be easily displayed in an automatic/static solution. Therefore the user would have problems understanding the data. A Visual Analytics approach is an iterative process where the user can have deeper insights to the data. The gained knowledge can differ between users.
 \subsection*{b)}
+
 shown in figure~\ref{fig:germany-2b}
-\begin{figure}[!ht]
-	\centering
-	\includegraphics[width=0.7\linewidth]{germany-2b}
-	\caption{static visualization}
-	\label{fig:germany-2b}
-\end{figure}
+
 
 \begin{enumerate}
 	\item average delivery duration per area
@@ -80,6 +76,29 @@ shown in figure~\ref{fig:germany-2b}
 	\item average day when the order was placed per area
 	\item average percentage if order arrived before Christmas per area
 \end{enumerate}
-\subsection*{c)}
+
+
+\subsection*{c)} The data aspect displayed on the map can be selected using the radio buttons in the top left corner. Users start out on a map of the whole country, stuctured into its states (see figure~\ref{fig:germany-2c1}). From here, they can zoom in to get a more fine-grained view of the data as seen in figure~\ref{fig:germany-2c2}. To aid with orientation, as soon as the the user zoomes in, a smaller map is displayed in the top right corner where the curently viewed section is highlighted. this also allows the user to quickly select different areas to be inspected. By toggeling the radio buttons, users can quickly see the average price, delivery date, etc. of a viewed area.
+
+\begin{figure}[!ht]
+	\centering
+	\includegraphics[width=0.7\linewidth]{germany-2b}
+	\caption{Static visualization}
+	\label{fig:germany-2b}
+\end{figure}
+
+\begin{figure}[!ht]
+	\centering
+	\includegraphics[width=0.7\linewidth]{germany-2c1}
+	\caption{Initial view}
+	\label{fig:germany-2c1}
+\end{figure}
+
+\begin{figure}[!ht]
+	\centering
+	\includegraphics[width=0.7\linewidth]{germany-2c2}
+	\caption{Zoomed in}
+	\label{fig:germany-2c2}
+\end{figure}
 
 \end{document}
