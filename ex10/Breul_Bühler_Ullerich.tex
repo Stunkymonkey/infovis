@@ -28,7 +28,7 @@
 \titlespacing*{\subsubsection} {3em}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
 \setcounter{MaxMatrixCols}{20}
 
-\title{\textbf{Assignment 9}}
+\title{\textbf{Assignment 10}}
 
 \begin{document}
 \maketitle 
@@ -36,7 +36,6 @@
 
 
 \section*{Task 1 - Document Similarity}
-
 \begin{enumerate}
 	\item[(a)] Sentence 1: \{impeachment: 1, -: 1, pelosi: 1, prepares: 1, to: 2, send: 1, articles: 1, senate: 1\} \\
 	$(v(1) = \begin{pmatrix} 1 & 1 & 1 & 1 & 2 & 1 & 1 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\ \end{pmatrix})$ \\
@@ -52,15 +51,22 @@
 	\item[(c)] 
 	One shortcoming is that this would result in sparse vectors which still need to be stored. 
 	The second disadvantage is, that this does not take the importance of words into account. 
-	It weights all words the same, but stop-words or less important ones could be neglected. 
-	
-	
+	It weights all words the same, but stop-words or less important ones could be neglected. 	
 \end{enumerate}
 
 
-
-
 \section*{Task 2 - Keyword Extraction}
+\subsection*{(a)}
+A lot of stop words are being displayed, which are obviously present i every other article. These words do not say anything about the content.
+\subsection*{(b)}
+The words reflect the content of the article. So it is much better compared to (a).
+\subsection*{(c)}
+\begin{figure}[!ht]
+	\centering
+	\includegraphics[width=0.7\linewidth]{ex2}
+	\caption{Screenshot of Canvas}
+	\label{fig:ex2}
+\end{figure}
 
 
 \end{document}
